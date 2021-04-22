@@ -1,0 +1,22 @@
+package com.droganation.FarmaSpring.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Repository;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import com.droganation.FarmaSpring.model.Produto;
+import com.droganation.FarmaSpring.repository.ProdutoRepository;
+
+public class ProdutoController {
+
+	@Autowired
+	private ProdutoRepository repository;
+	
+	@GetMapping
+	public ResponseEntity<List<Produto>>getAll(){
+		return ResponseEntity.ok(Repository.findAll());
+	}
+}

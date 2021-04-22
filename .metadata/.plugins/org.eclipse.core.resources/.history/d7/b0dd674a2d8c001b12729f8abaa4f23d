@@ -1,0 +1,5 @@
+package com.droganation.FarmaSpring.model;
+
+public class Produto {
+
+}
